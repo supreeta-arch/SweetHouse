@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Sweethouse</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="container header-wrap">
+  <a class="brand" href="/"><img class="logo" src="assets/img/logo.svg" alt=""> <span>Sweethouse</span></a>
+  <nav class="main-nav"><a href="index.html#products">Shop</a><a href="about.html">About</a></nav>
+</div></header>
+<main class="container section" style="max-width:860px">
+  <h1>Contact Us</h1>
+  <p class="muted">We'd love to hear from you. For orders or custom requests, reach out anytime.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div>
+      <h3>Store</h3>
+      <p>123, Sweet Street, Bengaluru 560001</p>
+      <p>📞 +91 99007 70011</p>
+      <p>✉️ orders@sweethouse.co.in</p>
+      <p>
+        <a class="btn btn-outline" href="https://wa.me/919900770011" target="_blank">Chat on WhatsApp</a>
+      </p>
+    </div>
+    <form id="contactForm">
+      <input name="name" required placeholder="Your Name">
+      <input name="email" required placeholder="Email">
+      <input name="subject" placeholder="Subject">
+      <input name="message" required placeholder="Message">
+      <button class="btn btn-primary" type="submit">Send Email</button>
+    </form>
+  </div>
+</main>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', e=>{
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    const body = encodeURIComponent(`${data.message}%0A-%20${data.name}%0A${data.email}`);
+    window.location.href = `mailto:orders@sweethouse.co.in?subject=${encodeURIComponent(data.subject||'Enquiry - Sweethouse')}&body=${body}`;
+  })
+</script>
+<script src="assets/js/wa-widget.js" defer></script>
+</body></html>

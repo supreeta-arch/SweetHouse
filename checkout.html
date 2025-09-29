@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Sweethouse</title>
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a href="/" class="brand"><img src="assets/img/logo.svg" class="logo" alt=""/> <span>Sweethouse</span></a>
+      <nav class="main-nav">
+        <a href="index.html#products">Back to Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section" style="max-width:860px">
+    <h1>Checkout</h1>
+    <p class="muted">Review your order and complete your purchase.</p>
+
+    <div id="orderSummary" class="section" style="padding-top:1rem"></div>
+
+    <form id="checkoutForm" class="section" style="padding-top:0">
+      <h2>Shipping Details</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <input required name="name" placeholder="Full Name" />
+        <input required name="phone" placeholder="Phone Number" />
+        <input required name="email" placeholder="Email" />
+        <input required name="pincode" placeholder="Pincode" />
+        <input required name="address" placeholder="Address Line" style="grid-column:1/-1" />
+        <input name="note" placeholder="Order Note (optional)" style="grid-column:1/-1" />
+      </div>
+      <div style="display:flex;gap:.6rem;margin-top:1rem">
+        <button class="btn btn-outline" type="button" id="emailOrder">Email Order</button>
+      </div>
+    </form>
+  </main>
+
+    <script>
+      const fmt = new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
+      const cart = JSON.parse(localStorage.getItem('sweethouse_cart')||'[]');
+      function render(){
+        const wrap = document.getElementById('orderSummary');
+        if(!cart.length){wrap.innerHTML='<p>Your cart is empty. <a href="index.html#products">Continue shopping</a>.</p>';return}
+        const subtotal = cart.reduce((s,i)=>s+i.price*i.qty,0);
+        const totalWeightG = cart.reduce((s,i)=>s + i.qty*200,0);
+        wrap.innerHTML = `
+          <h2>Order Summary</h2>
+          ${cart.map(i=>`<div class="cart-item"><img src="${i.image}" alt=""><div><div class="line-title">${i.title}</div><div class="muted">${fmt.format(i.price)} per 200g pack • Qty: ${i.qty} pack(s) • ${i.qty*200}g</div></div><div><strong>${fmt.format(i.price*i.qty)}</strong></div></div>`).join('')}
+          <div class="cart-footer" style="margin-top:1rem">
+            <div class="row"><span>Subtotal</span><strong>${fmt.format(subtotal)}</strong></div>
+            <div class="row"><span>Total Weight</span><span>${totalWeightG}g</span></div>
+            <div class="row"><span>Shipping</span><span>Calculated after address</span></div>
+          </div>`
+      }
+      function buildOrderMessage(data){
+        const lines = cart.map(i=>`• ${i.title} — ${i.qty} pack(s) (${i.qty*200}g) = ${fmt.format(i.price*i.qty)}`).join('%0A');
+        const total = cart.reduce((s,i)=>s+i.price*i.qty,0);
+        const totalWeightG = cart.reduce((s,i)=>s + i.qty*200,0);
+        return `New order from ${data.name}%0A${data.address}, ${data.pincode}%0A${data.phone} | ${data.email}%0A%0A${lines}%0A%0ATotal weight: ${totalWeightG}g%0ASubtotal: ${fmt.format(total)}%0ANote: ${data.note||'-'}`;
+      }
+      document.getElementById('checkoutForm').addEventListener('submit', e=>{
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+        const msg = buildOrderMessage(data);
+        window.open(`https://wa.me/919900770011?text=${msg}`,'_blank');
+      });
+      document.getElementById('emailOrder').addEventListener('click', ()=>{
+        const form = document.getElementById('checkoutForm');
+        const data = Object.fromEntries(new FormData(form).entries());
+        const lines = cart.map(i=>`- ${i.title} — ${i.qty} pack(s) (${i.qty*200}g) = ${fmt.format(i.price*i.qty)}`).join('%0A');
+        const total = cart.reduce((s,i)=>s+i.price*i.qty,0);
+        const totalWeightG = cart.reduce((s,i)=>s + i.qty*200,0);
+        const body = `New order from ${data.name}%0A${data.address}, ${data.pincode}%0A${data.phone} | ${data.email}%0A%0A${lines}%0A%0ATotal weight: ${totalWeightG}g%0ASubtotal: ${fmt.format(total)}%0ANote: ${data.note||'-'}`;
+        window.location.href = `mailto:orders@sweethouse.co.in?subject=New Order - Sweethouse&body=${body}`;
+      });
+      render();
+    </script>
+  <script src="assets/js/wa-widget.js" defer></script>
+</body>
+</html>

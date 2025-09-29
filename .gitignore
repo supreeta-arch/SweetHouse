@@ -1,0 +1,14 @@
+# Ignore system/editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# Node/Python caches if any
+node_modules/
+.dist/
+.cache/
+__pycache__/
+
+# Local servers and temp
+*.ps1
+!.\sweethouse-server.ps1

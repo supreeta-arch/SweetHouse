@@ -1,0 +1,49 @@
+{
+  "products": [
+    { "id": "dry-badam", "title": "Badam (Almonds)", "category": "Dry Fruits", "price": 699, "rating": 4.7, "image": "https://images.unsplash.com/photo-1584306665142-2e8c47dc87a1?q=80&w=1200&auto=format&fit=crop", "tags": ["almond","badam","dry fruits"] },
+    { "id": "dry-pista", "title": "Pista (Pistachios)", "category": "Dry Fruits", "price": 899, "rating": 4.7, "image": "https://images.unsplash.com/photo-1625944525066-501cfb698a05?q=80&w=1200&auto=format&fit=crop", "tags": ["pista","pistachio","dry fruits"] },
+    { "id": "dry-cashew", "title": "Cashew (Kaju)", "category": "Dry Fruits", "price": 799, "rating": 4.8, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["cashew","kaju","dry fruits"] },
+    { "id": "dry-pista-salt", "title": "Pista Salted", "category": "Dry Fruits", "price": 949, "rating": 4.6, "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop", "tags": ["pista","salted"] },
+    { "id": "dry-black-raisins", "title": "Black Dry Grapes (Raisins)", "category": "Dry Fruits", "price": 349, "rating": 4.5, "image": "https://images.unsplash.com/photo-1583334520524-2a61f085d2f7?q=80&w=1200&auto=format&fit=crop", "tags": ["raisins","dry grapes"] },
+    { "id": "dry-fig", "title": "Fig (Anjeer)", "category": "Dry Fruits", "price": 599, "rating": 4.6, "image": "https://images.unsplash.com/photo-1604908176997-4313b44a1460?q=80&w=1200&auto=format&fit=crop", "tags": ["fig","anjeer"] },
+    { "id": "dry-pumpkin-seeds", "title": "Pumpkin Seeds", "category": "Dry Fruits", "price": 299, "rating": 4.4, "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200&auto=format&fit=crop", "tags": ["seeds","pumpkin"] },
+
+    { "id": "kps-chikki", "title": "Chikki", "category": "Kovil Patti Special", "price": 199, "rating": 4.6, "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476e?q=80&w=1200&auto=format&fit=crop", "tags": ["chikki","peanut brittle"] },
+    { "id": "kps-chikki-round", "title": "Chikki Round", "category": "Kovil Patti Special", "price": 199, "rating": 4.5, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["chikki","round"] },
+    { "id": "kps-black-thill-ball", "title": "Black Thill Ball", "category": "Kovil Patti Special", "price": 179, "rating": 4.4, "image": "https://images.unsplash.com/photo-1546549039-49a4e7f1d0d5?q=80&w=1200&auto=format&fit=crop", "tags": ["sesame","black","ellurundai"] },
+    { "id": "kps-white-thill-ball", "title": "White Thill Ball", "category": "Kovil Patti Special", "price": 179, "rating": 4.4, "image": "https://images.unsplash.com/photo-1541782814453-26c09f2d3f55?q=80&w=1200&auto=format&fit=crop", "tags": ["sesame","white"] },
+    { "id": "kps-roasted-gram-round", "title": "Roasted Gram Round", "category": "Kovil Patti Special", "price": 169, "rating": 4.3, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["pottukadalai","roasted gram"] },
+
+    { "id": "sw-mysore-pak", "title": "Mysore Pak", "category": "Sweets", "price": 349, "rating": 4.8, "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476e?q=80&w=1200&auto=format&fit=crop", "tags": ["mysore pak","ghee sweet"] },
+    { "id": "sw-milk-khova", "title": "Milk Khova", "category": "Sweets", "price": 329, "rating": 4.6, "image": "https://images.unsplash.com/photo-1541976076758-347942db1970?q=80&w=1200&auto=format&fit=crop", "tags": ["khoya","milk sweet"] },
+    { "id": "sw-lava-laddu", "title": "Lava Laddu", "category": "Sweets", "price": 299, "rating": 4.5, "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476e?q=80&w=1200&auto=format&fit=crop", "tags": ["laddu"] },
+    { "id": "sw-tirunelveli-halva", "title": "Thirunelveli Halwa", "category": "Sweets", "price": 379, "rating": 4.7, "image": "https://images.unsplash.com/photo-1601197987413-ec0e0f6f0f3e?q=80&w=1200&auto=format&fit=crop", "tags": ["halwa","tirunelveli"] },
+    { "id": "sw-kamarkattu-laddu", "title": "Kamarkattu Laddu", "category": "Sweets", "price": 249, "rating": 4.2, "image": "https://images.unsplash.com/photo-1541782814453-26c09f2d3f55?q=80&w=1200&auto=format&fit=crop", "tags": ["jaggery","laddu"] },
+    { "id": "sw-adhirasam", "title": "Adhirasam", "category": "Sweets", "price": 329, "rating": 4.6, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["adhirasam","festival"] },
+
+    { "id": "mix-special", "title": "Special Mixture", "category": "Mixture Items", "price": 219, "rating": 4.4, "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop", "tags": ["mixture","snacks"] },
+    { "id": "mix-madras", "title": "Madras Mixture", "category": "Mixture Items", "price": 219, "rating": 4.5, "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop", "tags": ["mixture","madras"] },
+    { "id": "mix-garlic", "title": "Garlic Mixture", "category": "Mixture Items", "price": 229, "rating": 4.3, "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop", "tags": ["garlic","mixture"] },
+    { "id": "mix-kara-boondi", "title": "Kara Boondi", "category": "Mixture Items", "price": 209, "rating": 4.4, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["boondi","kara"] },
+    { "id": "mix-millets", "title": "Millets Mixture", "category": "Mixture Items", "price": 239, "rating": 4.2, "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop", "tags": ["millets","mixture"] },
+
+    { "id": "dh-masala-peanut", "title": "Masala Peanut", "category": "Dhall Items", "price": 199, "rating": 4.4, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["peanut","masala"] },
+    { "id": "dh-peanut-salt", "title": "Peanut Salt", "category": "Dhall Items", "price": 189, "rating": 4.3, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["peanut","salt"] },
+    { "id": "dh-roasted-peanut", "title": "Roasted Peanut", "category": "Dhall Items", "price": 199, "rating": 4.4, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["roasted","peanut"] },
+    { "id": "dh-moong-plain", "title": "Moong Dhall Plain", "category": "Dhall Items", "price": 179, "rating": 4.2, "image": "https://images.unsplash.com/photo-1583336663277-620dc1996580?q=80&w=1200&auto=format&fit=crop", "tags": ["moong","dhal"] },
+    { "id": "dh-moong-salt", "title": "Moong Dhall Salt", "category": "Dhall Items", "price": 179, "rating": 4.2, "image": "https://images.unsplash.com/photo-1583336663277-620dc1996580?q=80&w=1200&auto=format&fit=crop", "tags": ["moong","salt"] },
+
+    { "id": "mk-udupi-pudhina-murukku", "title": "Udupi Pudhina Murukku", "category": "Murukku Items", "price": 229, "rating": 4.5, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["murukku","pudhina"] },
+    { "id": "mk-kara-murukku", "title": "Kara Murukku", "category": "Murukku Items", "price": 219, "rating": 4.4, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["murukku","spicy"] },
+    { "id": "mk-kara-sev", "title": "Kara Sev", "category": "Murukku Items", "price": 209, "rating": 4.3, "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop", "tags": ["sev","kara"] },
+    { "id": "mk-butter-murukku", "title": "Butter Murukku", "category": "Murukku Items", "price": 229, "rating": 4.5, "image": "https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop", "tags": ["butter","murukku"] },
+    { "id": "mk-rose-cookies", "title": "Rose Cookies", "category": "Murukku Items", "price": 239, "rating": 4.2, "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200&auto=format&fit=crop", "tags": ["rose","cookies"] },
+
+    { "id": "cp-banana-plain", "title": "Banana Chips Plain", "category": "Chips Items", "price": 199, "rating": 4.4, "image": "https://images.unsplash.com/photo-1543339494-b4cd5b7a0f26?q=80&w=1200&auto=format&fit=crop", "tags": ["banana","chips"] },
+    { "id": "cp-banana-salt", "title": "Banana Chips Salt", "category": "Chips Items", "price": 199, "rating": 4.4, "image": "https://images.unsplash.com/photo-1543339494-b4cd5b7a0f26?q=80&w=1200&auto=format&fit=crop", "tags": ["banana","salt"] },
+    { "id": "cp-banana-pepper", "title": "Banana Chips Pepper", "category": "Chips Items", "price": 209, "rating": 4.3, "image": "https://images.unsplash.com/photo-1543339494-b4cd5b7a0f26?q=80&w=1200&auto=format&fit=crop", "tags": ["banana","pepper"] },
+    { "id": "cp-potato-pudhina", "title": "Potato Pudhina Chips", "category": "Chips Items", "price": 199, "rating": 4.2, "image": "https://images.unsplash.com/photo-1541599188778-cdc73298e659?q=80&w=1200&auto=format&fit=crop", "tags": ["potato","pudhina"] },
+    { "id": "cp-jackfruit", "title": "Jackfruit Chips", "category": "Chips Items", "price": 229, "rating": 4.4, "image": "https://images.unsplash.com/photo-1583663848850-46af132dc08d?q=80&w=1200&auto=format&fit=crop", "tags": ["jackfruit","chips"] },
+    { "id": "cp-bitter-gourd", "title": "Bitter Gourd Chips", "category": "Chips Items", "price": 219, "rating": 4.1, "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200&auto=format&fit=crop", "tags": ["bitter gourd","chips"] }
+  ]
+}

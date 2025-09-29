@@ -1,0 +1,40 @@
+id,title,category,price,rating,image,tags,badge,unit,variant_1_label,variant_1_price,variant_2_label,variant_2_price,variant_3_label,variant_3_price
+dry-badam,Badam (Almonds),Dry Fruits,699,4.7,https://images.unsplash.com/photo-1584306665142-2e8c47dc87a1?q=80&w=1200&auto=format&fit=crop,"almond|badam|dry fruits",,,250g,,,,500g,,
+dry-pista,Pista (Pistachios),Dry Fruits,899,4.7,https://images.unsplash.com/photo-1625944525066-501cfb698a05?q=80&w=1200&auto=format&fit=crop,"pista|pistachio|dry fruits",,,250g,,,,500g,,
+dry-cashew,Cashew (Kaju),Dry Fruits,799,4.8,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"cashew|kaju|dry fruits",,,250g,,,,500g,,
+dry-pista-salt,Pista Salted,Dry Fruits,949,4.6,https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop,"pista|salted",,,,,,,,
+dry-black-raisins,Black Dry Grapes (Raisins),Dry Fruits,349,4.5,https://images.unsplash.com/photo-1583334520524-2a61f085d2f7?q=80&w=1200&auto=format&fit=crop,"raisins|dry grapes",,,,,,,,
+dry-fig,Fig (Anjeer),Dry Fruits,599,4.6,https://images.unsplash.com/photo-1604908176997-4313b44a1460?q=80&w=1200&auto=format&fit=crop,"fig|anjeer",,,,,,,,
+dry-pumpkin-seeds,Pumpkin Seeds,Dry Fruits,299,4.4,https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200&auto=format&fit=crop,"seeds|pumpkin",,,,,,,,
+kps-chikki,Chikki,Kovil Patti Special,199,4.6,https://images.unsplash.com/photo-1606313564200-e75d5e30476e?q=80&w=1200&auto=format&fit=crop,"chikki|peanut brittle",Box,200g,,400g,,1kg,,
+kps-chikki-round,Chikki Round,Kovil Patti Special,199,4.5,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"chikki|round",Box,200g,,400g,,1kg,,
+kps-black-thill-ball,Black Thill Ball,Kovil Patti Special,179,4.4,https://images.unsplash.com/photo-1546549039-49a4e7f1d0d5?q=80&w=1200&auto=format&fit=crop,"sesame|black|ellurundai",,,,,,,,
+kps-white-thill-ball,White Thill Ball,Kovil Patti Special,179,4.4,https://images.unsplash.com/photo-1541782814453-26c09f2d3f55?q=80&w=1200&auto=format&fit=crop,"sesame|white",,,,,,,,
+kps-roasted-gram-round,Roasted Gram Round,Kovil Patti Special,169,4.3,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"pottukadalai|roasted gram",,,,,,,,
+sw-mysore-pak,Mysore Pak,Sweets,349,4.8,https://images.unsplash.com/photo-1606313564200-e75d5e30476e?q=80&w=1200&auto=format&fit=crop,"mysore pak|ghee sweet",,250g,199,500g,349,1kg,649
+sw-milk-khova,Milk Khova,Sweets,329,4.6,https://images.unsplash.com/photo-1541976076758-347942db1970?q=80&w=1200&auto=format&fit=crop,"khoya|milk sweet",,250g,189,500g,329,1kg,599
+sw-lava-laddu,Lava Laddu,Sweets,299,4.5,https://images.unsplash.com/photo-1606313564200-e75d5e30476e?q=80&w=1200&auto=format&fit=crop,"laddu",,250g,179,500g,299,1kg,549
+sw-tirunelveli-halva,Thirunelveli Halwa,Sweets,379,4.7,https://images.unsplash.com/photo-1601197987413-ec0e0f6f0f3e?q=80&w=1200&auto=format&fit=crop,"halwa|tirunelveli",,250g,219,500g,379,1kg,699
+sw-kamarkattu-laddu,Kamarkattu Laddu,Sweets,249,4.2,https://images.unsplash.com/photo-1541782814453-26c09f2d3f55?q=80&w=1200&auto=format&fit=crop,"jaggery|laddu",,,,,,,,
+sw-adhirasam,Adhirasam,Sweets,329,4.6,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"adhirasam|festival",,,,,,,,
+mix-special,Special Mixture,Mixture Items,219,4.4,https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop,"mixture|snacks",,250g,129,500g,219,1kg,399
+mix-madras,Madras Mixture,Mixture Items,219,4.5,https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop,"mixture|madras",,250g,129,500g,219,1kg,399
+mix-garlic,Garlic Mixture,Mixture Items,229,4.3,https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop,"garlic|mixture",,,,,,,,
+mix-kara-boondi,Kara Boondi,Mixture Items,209,4.4,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"boondi|kara",,,,,,,,
+mix-millets,Millets Mixture,Mixture Items,239,4.2,https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop,"millets|mixture",,,,,,,,
+dh-masala-peanut,Masala Peanut,Dhall Items,199,4.4,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"peanut|masala",,250g,119,500g,199,1kg,349
+dh-peanut-salt,Peanut Salt,Dhall Items,189,4.3,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"peanut|salt",,250g,109,500g,189,1kg,329
+dh-roasted-peanut,Roasted Peanut,Dhall Items,199,4.4,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"roasted|peanut",,,,,,,,
+dh-moong-plain,Moong Dhall Plain,Dhall Items,179,4.2,https://images.unsplash.com/photo-1583336663277-620dc1996580?q=80&w=1200&auto=format&fit=crop,"moong|dhal",,,,,,,,
+dh-moong-salt,Moong Dhall Salt,Dhall Items,179,4.2,https://images.unsplash.com/photo-1583336663277-620dc1996580?q=80&w=1200&auto=format&fit=crop,"moong|salt",,,,,,,,
+mk-udupi-pudhina-murukku,Udupi Pudhina Murukku,Murukku Items,229,4.5,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"murukku|pudhina",,,250g,,,,500g,,
+mk-kara-murukku,Kara Murukku,Murukku Items,219,4.4,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"murukku|spicy",,,250g,,,,500g,,
+mk-kara-sev,Kara Sev,Murukku Items,209,4.3,https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop,"sev|kara",,,250g,,,,500g,,
+mk-butter-murukku,Butter Murukku,Murukku Items,229,4.5,https://images.unsplash.com/photo-1625944663966-3ac3b59aaae1?q=80&w=1200&auto=format&fit=crop,"butter|murukku",,,250g,,,,500g,,
+mk-rose-cookies,Rose Cookies,Murukku Items,239,4.2,https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200&auto=format&fit=crop,"rose|cookies",,,250g,,,,500g,,
+cp-banana-plain,Banana Chips Plain,Chips Items,199,4.4,https://images.unsplash.com/photo-1543339494-b4cd5b7a0f26?q=80&w=1200&auto=format&fit=crop,"banana|chips",,,200g,,,,500g,,
+cp-banana-salt,Banana Chips Salt,Chips Items,199,4.4,https://images.unsplash.com/photo-1543339494-b4cd5b7a0f26?q=80&w=1200&auto=format&fit=crop,"banana|salt",,,200g,,,,500g,,
+cp-banana-pepper,Banana Chips Pepper,Chips Items,209,4.3,https://images.unsplash.com/photo-1543339494-b4cd5b7a0f26?q=80&w=1200&auto=format&fit=crop,"banana|pepper",,,200g,,,,500g,,
+cp-potato-pudhina,Potato Pudhina Chips,Chips Items,199,4.2,https://images.unsplash.com/photo-1541599188778-cdc73298e659?q=80&w=1200&auto=format&fit=crop,"potato|pudhina",,,200g,,,,500g,,
+cp-jackfruit,Jackfruit Chips,Chips Items,229,4.4,https://images.unsplash.com/photo-1583663848850-46af132dc08d?q=80&w=1200&auto=format&fit=crop,"jackfruit|chips",,,200g,,,,500g,,
+cp-bitter-gourd,Bitter Gourd Chips,Chips Items,219,4.1,https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200&auto=format&fit=crop,"bitter gourd|chips",,,200g,,,,500g,,
