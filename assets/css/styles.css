@@ -75,8 +75,8 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:
  .scroll-indicator{text-align:center;color:var(--muted);padding:.5rem 0}
 
 /* Hero - banner style */
-.hero-banner{position:relative;background:transparent}
-/* .hero-banner{position:relative;background:#8a63d2;border-top:2px solid #8a63d2;} */
+/* .hero-banner{position:relative;background:transparent} */
+.hero-banner{position:relative;background:#8a63d2;border-top:2px solid #8a63d2;}
 .hero-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.25)), var(--hero-img) no-repeat center/cover;}
 .hero-banner>.container{position:relative}
 .hero-banner .hero-text{padding:5rem 0 4rem}
