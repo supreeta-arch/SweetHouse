@@ -1,0 +1,360 @@
+/* src/index.css (patched) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- global typographic / layout tweaks --- */
+:root {
+  --brand-purple-1: #7c3aed;
+  --brand-purple-2: #6d28d9;
+  --muted: #6b7280;
+  /* Header spacing variables (authoritative) */
+  --header-height: 96px;           /* fallback used by legacy helpers */
+  --header-height-desktop: 104px;  /* default desktop header reserved height */
+  --header-height-mobile: 84px;    /* mobile header reserved height */
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- header & logo animations (pure CSS) --- */
+@keyframes header-slide-down {
+  0%   { transform: translateY(-28px); opacity: 0; }
+  60%  { transform: translateY(6px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.header-animate { animation: header-slide-down 640ms cubic-bezier(.22,.9,.26,1) both; }
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.header-gradient-animate { background-size: 200% 200%; animation: gradient-shift 9s ease-in-out infinite; }
+
+/* logo pop + float */
+@keyframes logo-pop {
+  0% { transform: scale(.9); opacity: 0; }
+  60% { transform: scale(1.06); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes logo-float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+.logo-pop { animation: logo-pop 520ms cubic-bezier(.2,.9,.3,1) both; }
+.logo-float { animation: logo-float 4.5s ease-in-out infinite; }
+
+/* header shrink on scroll */
+.header-shrink {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+.header-large {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* subtle card entrance */
+@keyframes card-fade-up {
+  0%   { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.card-entrance {
+  animation: card-fade-up 420ms ease both;
+}
+
+/* product image styling */
+.product-img {
+  transition: transform 320ms ease, box-shadow 320ms ease;
+}
+.product-img:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 10px 30px rgba(15,23,42,0.08); }
+
+/* small responsive tweaks */
+@media (max-width: 820px) {
+  .logo-responsive { height: 64px !important; }
+  .header-title-responsive { font-size: 1.05rem; }
+  .search-mobile-collapse { width: 180px; }
+}
+
+/* --- Fixed header support: keep and unify rules --- */
+/* Make the header fixed and reserve space for content so it doesn't overlap */
+
+/* Make the header fixed and stretch full width */
+.site-header-fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 60;
+  will-change: transform;
+  backdrop-filter: blur(4px);
+  /* keep height consistent if not set inline */
+  height: var(--header-height-desktop);
+  display: flex;
+  align-items: center;
+}
+
+/* Reserve space for the header so the page content starts below it.
+   Use the helper class on the main content wrapper (recommended): .site-main-offset */
+.site-main-offset {
+  padding-top: var(--header-height-desktop);
+}
+
+/* Responsive tweaks: smaller header variable on narrow screens */
+@media (max-width: 1024px) {
+  :root { --header-height-desktop: 92px; }
+  .site-main-offset { padding-top: var(--header-height-desktop); }
+}
+@media (max-width: 640px) {
+  :root { --header-height-desktop: var(--header-height-mobile); }
+  .site-main-offset { padding-top: var(--header-height-desktop); }
+}
+
+/* header inner container alignment */
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* even spacing between logo, nav, controls */
+  width: 100%;
+}
+
+/* left: logo area */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 220px; /* reserve space so logo doesn't push nav on small screens */
+}
+
+/* logo capsule */
+.logo-capsule {
+  background: rgba(255,255,255,0.12);
+  padding: 6px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* logo sizing */
+.logo-img {
+  height: 92px; /* made larger and consistent */
+  width: auto;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.logo-img:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+
+/* nav area */
+.header-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+.header-nav a { color: white; opacity: 0.98; }
+
+/* search & controls */
+.header-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* search input responsive width */
+.header-search {
+  width: 420px;
+  max-width: 40vw;
+}
+@media (max-width: 1024px) {
+  .header-search { width: 300px; max-width: 44vw; }
+}
+@media (max-width: 640px) {
+  .header-search { display: none; } /* hide on small screens to save space */
+}
+
+/* pill buttons */
+.header-btn {
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+/* small screen layout lock: stack a compact brand + menu */
+@media (max-width: 640px) {
+  .header-brand { min-width: 140px; }
+  .logo-img { height: 64px; }
+  .header-nav { display: none; } /* hide nav on small screens to avoid wrapping */
+  .site-main-offset { padding-top: var(--header-height-mobile); }
+}
+
+/* ---------- Page load, card and floating cart styles ---------- */
+
+/* page fade-in */
+@keyframes page-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-fade {
+  animation: page-fade 420ms ease both;
+}
+
+/* card: refined look */
+.product-card {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 320ms ease, box-shadow 320ms ease;
+  will-change: transform;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
+}
+
+/* image cover gradient + subtle overlay */
+.product-card .img-wrap {
+  position: relative;
+  background: linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02));
+}
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 420ms ease;
+}
+.product-card:hover img { transform: scale(1.06); }
+
+/* product meta */
+.product-meta { padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.product-row { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+
+/* price chip & weight */
+.price-chip {
+  background: linear-gradient(90deg, rgba(124,58,237,0.12), rgba(109,40,217,0.12));
+  color: #5b21b6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+/* badge (e.g., New, Popular) */
+.badge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: linear-gradient(90deg,#ff7a7a,#ffb26b);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* actions row */
+.actions-row {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+/* floating cart button */
+.floating-cart {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 80;
+  background: linear-gradient(135deg,#6d28d9,#8b5cf6);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(13, 23, 56, 0.18);
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.floating-cart:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 26px 55px rgba(13,23,56,0.2); }
+
+.cart-count {
+  background: white;
+  color: #6d28d9;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 8px;
+  min-width: 28px;
+  text-align: center;
+}
+
+/* cart modal */
+.cart-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(11,12,15,0.45);
+  z-index: 90;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.cart-modal {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 -8px 60px rgba(13,23,56,0.18);
+  margin: 0 16px 24px;
+}
+.cart-item { display:flex; gap:12px; align-items:center; padding:10px 0; border-bottom: 1px solid rgba(15,23,42,0.04); }
+.cart-item img { width:56px; height:56px; object-fit:cover; border-radius:8px; }
+
+/* small helpers */
+.small-muted { font-size:0.9rem; color:var(--muted); }
+.center-inline { display:inline-flex; align-items:center; gap:8px; }
+
+/* ---------- FIXED HEADER (authoritative) ---------- */
+/* this block ensures header is fixed and content starts below it (final authoritative rules) */
+
+:root {
+  --header-height: 96px; /* adjust if you want taller/shorter header */
+}
+
+/* make header fixed and full-width */
+.site-header-fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  will-change: transform;
+  backdrop-filter: blur(6px);
+}
+
+/* reserve space for the fixed header so page content won't hide under it */
+.site-main-offset {
+  padding-top: var(--header-height);
+}
+
+/* responsive tweak: smaller header on narrow screens */
+@media (max-width: 640px) {
+  :root { --header-height: 84px; }
+  .site-main-offset { padding-top: var(--header-height); }
+}
