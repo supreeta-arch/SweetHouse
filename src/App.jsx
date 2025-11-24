@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useEffect, useMemo, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AdminProducts from "./admin/AdminProducts";
 
 /* ---------- Admin guard + helper ---------- */
